@@ -26,50 +26,65 @@ A Python-based video downloader that supports YouTube, TikTok, and Instagram. Th
 
 ``` bash
 python3 -m venv env
+```
+``` bash
 source env/bin/activate
+```
+```bash
 pip install -r requirements.txt
-Install ffmpeg (required for re-encoding):
+```
 
-macOS:
-bash
-Copy code
+3. **Install ffmpeg (required for re-encoding)**:
+
+#### macOS:
+``` bash
 brew install ffmpeg
-Ubuntu/Debian:
-bash
-Copy code
+```
+
+#### Ubuntu/Debian:
+``` bash
 sudo apt update
 sudo apt install ffmpeg
-Run the program:
+```
 
-bash
-Copy code
+4, **Run the program**:
+
+``` bash
 python -m video_downloader
+```
+
+``` bash
 Enter the URL for the video (YouTube, TikTok, or Instagram) and, optionally, specify a save path (default is ./downloads).
+```
 
-Example Usage
-plaintext
-Copy code
-Please provide the URL (YouTube, TikTok, or Instagram): https://youtu.be/sampleurl
-Enter the save path or press Enter to use './downloads':
+## Example Usage
+
+- Please provide the URL (YouTube, TikTok, or Instagram): https://youtu.be/sampleurl
+- **Enter the save path or press Enter to use './downloads'**:
 The program will download the video, re-encode it if necessary, and save it in the specified location.
-Code Explanation
-Re-encoding Requirement:
 
-The downloader will download the best available video and audio formats separately if needed.
-Using ffmpeg, the video is re-encoded to H.264 and AAC formats to ensure compatibility with most video players, including QuickTime.
-Modular Design:
+## Code Explanation
+**Re-encoding Requirement**:
+
+- The downloader will download the best available video and audio formats separately if needed.
+- Using ffmpeg, the video is re-encoded to H.264 and AAC formats to ensure compatibility with most video players, including QuickTime.
+
+**Modular Design**:
 
 The code is organized into modules for each platform (YouTube, TikTok, Instagram) and utility functions, making it easy to maintain and expand.
-Requirements:
+
+## Requirements:
 
 A requirements.txt file is included for easy installation of dependencies. The ffmpeg installation is required for re-encoding functionality.
-License
+
+## License
 This project is licensed under the MIT License.
 
-Additional Notes
-Update the repository link (https://github.com/yourusername/Video-Downloader-Recoding.git) with your actual GitHub repository URL.
-Be sure to have ffmpeg installed and accessible in your system path to enable re-encoding.
-If you haven’t yet, generate a requirements.txt file by running:
-bash
-Copy code
+## Additional Notes
+- Update the repository link (https://github.com/yourusername/Video-Downloader-Recoding.git) with your actual GitHub repository URL.
+- Be sure to have ffmpeg installed and accessible in your system path to enable re-encoding.
+- **If you haven’t yet, generate a requirements.txt file by running**:
+
+```bash
 pip freeze > requirements.txt
+```
